@@ -1,0 +1,256 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, 
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+:root {
+    --group-one-background-color: #FF8811;
+
+}
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.split {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.split > * {
+    flex-basis: 30%;
+    min-width: 240px;
+}
+
+.btn {
+    margin: 10px 20px 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 20px; 
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #CACACA;
+    background: blue;
+    border-radius: 4px;
+    transition: transform 175ms ease-in-out, opacity 175ms linear;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.03);
+    opacity: 0.9;
+
+}
+
+
+.record-label-title {
+    line-height: 1;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #17353d;
+
+}
+
+.hero {
+    text-align: center;
+    padding: 240px 0;
+    background: #222;
+    color: white;
+    fill-opacity: .8;
+    opacity: .95;
+
+}
+
+.spacing > * + * {
+    margin-top:  2rem;
+    /* add var here: var(--spacer, 2rem) */
+}
+
+.featured {
+    background: #b3b3cc;
+    padding-top: 60px;
+}
+
+img.header-img {
+    position: absolute;
+    border-radius: 80%;
+    top: 5%;
+    left: 27%;
+    bottom: 13%;
+    width: 50%;
+    align-items: center;
+    z-index: -1;
+    opacity: .3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+}
+
+img.artist-img {
+    border-radius: 50%;
+}
+
+.featured-details {
+    opacity: 0;
+    -webkit-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+  }
+
+  .featured-artist {
+    position: relative;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .featured-artist:hover .featured-details, .featured-artist:focus .featured-artist {
+    opacity: 1;
+    text-shadow: 0 0 2em white;
+  }
+
+/* 
+  .featured-artist:hover, .featured-artist:focus {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  } */
+
+
+  .featured-details span {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .artists {
+    background: #eee;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+  }
+
+
+  .artist {
+    background: var(--group-one-background-color);
+    padding: 48px;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    text-align: center;
+ 
+  }
+
+  .artist:nth-child(even) {
+    /*For exercise 5*/
+  }
+
+
+  .artist-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  }
+  
+  .artist-img {
+    display: inline-block;
+    justify-content: center;
+
+}
+
+.artist-description {
+    font-size: 18px;
+    color: #292E1E
+}
+
+.footer-container {
+    background: #333;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .footer-section-left {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footer-section {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  
+  .footer-section p {
+    margin-top: 0;
+    padding: 0 10px 0 10px;
+    /* font-size: 1.5vw; */
+  }
+  
+  .footer-section.name {
+    border-right: 1px solid ;
+    padding-right: 10px;
+    font-weight: 100;
+  
+  }
+
+
+@media (max-width: 600px) {
+
+
+:root {
+    --group-one-background-color: #AF5B5B;
+    --group-two-background-color: #320E3B;
+    --main-font-type: 'Helvetica Neue';
+    --button-hover-color: #042A2B;
+    --main-header-color: #001427;
+    --header-color: #BAF2BB
+
+}
+
+
+}

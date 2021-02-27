@@ -1,0 +1,285 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    /*Exercise 6, Checkpoint 1*/
+    --main-font-type: 'Roboto';
+    font-family: var(--main-font-type, 'Helvetica Neue');
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, 
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+/*Exercise 4, Checkpoint 1*/
+:root {
+    /*Exercise 4, Checkpoint 2*/
+    --group-one-background-color: #FF8811;
+    /*Exercise 4, Checkpoint 3*/
+    --group-two-background-color: #8A978A;
+}
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.split {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.split > * {
+    flex-basis: 30%;
+    min-width: 240px;
+}
+
+.btn {
+    /*Exercise 4, Checkpoint 5*/
+    --button-hover-color: #7271D8;
+    margin: 10px 20px 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 20px; 
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #CACACA;
+    background: blue;
+    border-radius: 4px;
+    transition: transform 175ms ease-in-out, opacity 175ms linear;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.03);
+    opacity: 0.9;
+    /*Exercise 4, Checkpoint 6*/
+    background: var(--button-hover-color);
+    
+
+}
+
+
+.record-label-title {
+    line-height: 1;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.section-title {
+    /*Exercise 5, Checkpoint 1*/
+    --sub-title-text-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    /*Exercise 5, Checkpoint 2*/
+    font-size: var(--sub-title-text-size);
+    line-height: 1;
+    color: #17353d;
+
+}
+
+.hero {
+    text-align: center;
+    padding: 240px 0;
+    /*Exercise 2, Checkpoint 1 */
+    --main-header-color: #222;
+    /*Exercise 3, Checkpoint 1 */
+    background: var(--main-header-color);
+    color: white;
+    fill-opacity: .8;
+    opacity: .95;
+
+}
+
+.spacing > * + * {
+    margin-top:  2rem;
+    /* add var here: var(--spacer, 2rem) */
+}
+
+.featured {
+    background: #b3b3cc;
+    padding-top: 60px;
+}
+
+img.header-img {
+    position: absolute;
+    border-radius: 80%;
+    top: 5%;
+    left: 27.5%;
+    bottom: 13%;
+    width: 50%;
+    align-items: center;
+    z-index: -1;
+    opacity: .3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+}
+
+img.artist-img {
+    border-radius: 50%;
+}
+
+.featured-details {
+    opacity: 0;
+    -webkit-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+  }
+
+  .featured-artist {
+    position: relative;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .featured-artist:hover .featured-details, .featured-artist:focus .featured-artist {
+    opacity: 1;
+    text-shadow: 0 0 2em white;
+  }
+
+/* 
+  .featured-artist:hover, .featured-artist:focus {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  } */
+
+
+  .featured-details span {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .artists {
+    background: #eee;
+    padding-bottom: 20px;
+  }
+
+
+  .artist {
+    /*Exercise 4, Checkpoint 4*/ 
+    background: var(--group-one-background-color);
+    padding: 48px;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    text-align: center;
+ 
+  }
+
+  .artist:nth-child(even){
+    /*Exercise 4, Checkpoint 4 && Exercise 6, Checkpoint 2*/
+    background: var(--group-two-background-color, var(black, gray));
+  }
+
+  .artist-title {
+    /*Exercise 5, Checkpoint 3*/
+    --sub-title-text-size: 2rem;
+    /*Exercise 5, Checkpoint 4*/
+    font-size: var(--sub-title-text-size);
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  }
+  
+  .artist-img {
+    display: inline-block;
+    justify-content: center;
+
+}
+
+.artist-description {
+    /*Exercise 2, Checkpoint 3*/
+    --description-font-size: 16px;
+    /*Exercise 3, Checkpoint 3*/
+    font-size: var(--description-font-size);
+    /*Exercise 3, Checkpoint 4*/
+    --custom-black: #292E1E;
+    /*Exercise 3, Checkpoint 5*/
+    --description-text-color: --custom-black;
+    color: var(--description-text-color);
+}
+
+.footer-container {
+    /*Exercise 5, Checkpoint 5*/
+    --main-header-color: #7D6B91;
+    background: var(--main-header-color);
+
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .footer-section-left {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footer-section {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  
+  .footer-section p {
+    margin-top: 0;
+    padding: 0 10px 0 10px;
+  }
+  
+  .footer-section.name {
+    border-right: 1px solid ;
+    padding-right: 10px;
+    font-weight: 100;
+  
+  }
+
+
+
+ /*Exercise 7*/
+  @media (max-width: 600px) {
+
+
+    :root {
+        --group-one-background-color: #AF5B5B;
+        --group-two-background-color: #320E3B;
+        --main-font-type: 'Helvetica Neue';
+        --button-hover-color: #042A2B;
+        --main-header-color: #001427;
+        --header-color: #BAF2BB
+    
+    }
+    
+    
+    }
+    
